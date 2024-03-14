@@ -1,12 +1,18 @@
 import './App.css'
+import {Route,Routes} from 'react-router-dom'
+import Lobby from './Pages/Lobby'
+import RoomPage from './Pages/RoomPage'
 
 function App() {
   
 
   return (
-    <>
-      <h1 className='text-3xl text-blue-600'>Hello World</h1>
-    </>
+    <div>
+      <Routes>
+        <Route path='/' element={<Lobby/>}/>
+        <Route path='/:roomId' element={<RoomPage/>}/>
+      </Routes>
+    </div>
   )
 }
 
